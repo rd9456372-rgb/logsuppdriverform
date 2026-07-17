@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>lOGSUPP – Driver Application</title>
+
+  <!-- Google Font: Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', Arial, sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+    }
+
+    /* Left Side */
+    .left-side {
+      flex: 1;
+      background: linear-gradient(rgba(0, 51, 102, 0.6), rgba(0, 51, 102, 0.6)), 
+                  url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdYVysoyMugSTHqOrHMp__OwQCNKMRJVh0EPQYHws-qfrEmD1FMIUw7EZ1&s=10') center/cover no-repeat;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 60px;
+    }
+
+    .left-side h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    .left-side p {
+      font-size: 0.95rem;
+      margin-top: 10px;
+    }
+
+    /* Right Form */
+    .form-container {
+      flex: 1;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      overflow-y: auto;
+      height: 100vh;
+      padding: 40px 20px;
+    }
+
+    form {
+      width: 100%;
+      max-width: 600px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 30px 25px;
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      color: #003366;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      border-left: 4px solid #007bff;
+      padding-left: 8px;
+      color: #003366;
+      margin-top: 25px;
+    }
+
+    label {
+      font-weight: 500;
+      margin-top: 15px;
+      display: block;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="file"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    input[type="radio"] {
+      margin-right: 6px;
+    }
+
+    .radio-group {
+      margin-top: 6px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(90deg, #007bff, #0056b3);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 30px;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: linear-gradient(90deg, #0056b3, #004099);
+    }
+
+    /* Responsive layout for tablets & mobiles */
+    @media (max-width: 992px) {
+      body {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .left-side {
+        height: 200px;
+        padding: 40px 20px;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      .form-container {
+        height: auto;
+        padding: 20px;
+      }
+
+      form {
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .left-side h1 {
+        font-size: 1.5rem;
+      }
+
+      .left-side p {
+        font-size: 0.85rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="left-side">
+    <h1>Join <span style="color:#00aaff;">Logsupp Ltd</span></h1>
+    <p>Drive with confidence. Deliver with pride. Apply now to become part of our dedicated courier network.</p>
+  </div>
+
+  <div class="form-container">
+   <form action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="e24eb97e-a3c6-44b7-aff0-520f42f739b5">
+  <input type="hidden" name="subject" value="New Driver Application Submission">
+  <input type="hidden" name="from_name" value="logsupp Ltd">
+  <input type="hidden" name="to" value="Rd94563722gmail.com">
+
+      <h2>🚚 Driver Application Form</h2>
+
+      <!-- Personal Info -->
+      <h3>Personal Information</h3>
+      <label for="fullname">First name</label>
+          <input id="fullname" name="Full Name" type="text" required>
+
+          <label for="Midle Name OR Surname">Midle Name (Optional) </label>
+          <input id="Midle Name OR Surname" name="Midle Name" type="text" optional>
+
+          <label for="Last Name">Last name</label>
+          <input id="fullname" name="Last Name" type="text" required>
+
+          <label for="dob">Date of Birth:</label>
+<input type="date" id="dob" name="Date of Birth" required>
+
+
+      <label>Address</label>
+      <input type="text" name="Address" required>
+
+      <label>Contact Number</label>
+      <input type="text" name="Contact Number" required>
+
+      <label>National Insurance Number</label>
+      <input type="text" name="National Insurance Number" required>
+
+      <label>Email</label>
+      <input type="email" name="Email" required>
+
+      <!--Emergency Contact Information -->
+
+<h4>Emergency Contact Details</h4>
+<label for="emergency-name">Contact Name:</label>
+<input type="text" id="emergency-name" name="Emergency Contact Name" placeholder="Full Name" required>
+
+<label for="emergency-relation">Relationship:</label>
+<input type="text" id="emergency-relation" name="Emergency Contact Relationship" placeholder="Relation (e.g., Brother, Friend)" required>
+
+<label for="emergency-phone">Contact Number:</label>
+<input type="text" id="emergency-phone" name="Emergency Contact Number" placeholder="Phone Number" required>
+
+      <!-- Legal Info -->
+      <h3>Legal Information</h3>
+      <label>Right to work in UK</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Right to work in UK" value="Yes">Yes</label>
+        <label><input type="radio" name="Right to work in UK" value="No">No</label>
+      </div>
+
+      <label>UK Driving Licence</label>
+      <div class="radio-group">
+        <label><input type="radio" name="UK Driving Licence" value="Yes">Yes</label>
+        <label><input type="radio" name="UK Driving Licence" value="No">No</label>
+      </div>
+<label>UK Driving Licence Number</label>
+      <input type="text" name="UK Driving Licence Number" required>
+
+      <label for="licence-expiry">Driving Licence Expiry Date:</label>
+<input type="date" id="licence-expiry" name="Licence Expiry Date" required>
+
+       <label for="licence-category">Licence Category (e.g., B, C1, C, CE):</label>
+<input type="text" id="licence-category" name="Licence Category" placeholder="Enter your licence category" required>
+
+      <label>Points in DVLA Summary (Enter if any)</label>
+      <input type="text" name="Points in DVLA Summary">
+      <h4>DVLA / Background Check Consent</h4>
+<label><input type="checkbox" name="DVLA Consent" required> I give consent for Logsupp Ltd to carry out DVLA licence and background checks.</label>
+
+
+      <h3></h3><label>Licence Suspended</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Licence Suspended" value="Yes">Yes</label>
+        <label><input type="radio" name="Licence Suspended" value="No">No</label>
+      </div>
+
+      <label>Valid DBS Check</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Valid DBS Check" value="Yes">Yes</label>
+        <label><input type="radio" name="Valid DBS Check" value="No">No</label>
+      </div>
+
+      <label>Driving Convictions in last 5 years</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Driving Convictions" value="Yes">Yes</label>
+        <label><input type="radio" name="Driving Convictions" value="No">No</label>
+      </div>
+
+      <!-- Experience -->
+      <label>Confident using any app or used earlier</label>
+      <textarea name="App Experience" rows="2"></textarea>
+
+      <label>Comfortable with 10–16 hour shifts</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Long Shifts" value="Yes">Yes</label>
+        <label><input type="radio" name="Long Shifts" value="No">No</label>
+      </div>
+
+      <label>Understand weekly pay (1st week in hand)</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Weekly Pay" value="Yes">Yes</label>
+        <label><input type="radio" name="Weekly Pay" value="No">No</label>
+      </div>
+
+      <label>Understand 4 weeks’ notice if leaving</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Notice Period" value="Yes">Yes</label>
+        <label><input type="radio" name="Notice Period" value="No">No</label>
+      </div>
+
+      <!-- Company Standards -->
+      <h3>Company Standards</h3>
+      <label>Will use company app</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Use Company App" value="Yes">Yes</label>
+        <label><input type="radio" name="Use Company App" value="No">No</label>
+      </div>
+
+      <label>Will wear company uniform and PPE</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Uniform PPE" value="Yes">Yes</label>
+        <label><input type="radio" name="Uniform PPE" value="No">No</label>
+      </div>
+
+      <label>Can maintain professional communication</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Professional Communication" value="Yes">Yes</label>
+        <label><input type="radio" name="Professional Communication" value="No">No</label>
+      </div>
+
+      <!-- Final Checks -->
+      <h3>Final Checks</h3>
+      <label>What time can start</label>
+      <input type="text" name="Start Time">
+
+      <!-- Shift Availability -->
+<h4>Shift Availability</h4>
+<p>Select days you are available:</p>
+<label><input type="checkbox" name="Availability" value="Monday" required> Monday</label>
+<label><input type="checkbox" name="Availability" value="Tuesday" required> Tuesday</label>
+<label><input type="checkbox" name="Availability" value="Wednesday" required> Wednesday</label>
+<label><input type="checkbox" name="Availability" value="Thursday" required> Thursday</label>
+<label><input type="checkbox" name="Availability" value="Friday" required> Friday</label>
+<label><input type="checkbox" name="Availability" value="Saturday" required> Saturday</label>
+<label><input type="checkbox" name="Availability" value="Sunday" required> Sunday</label>
+<br>
+<label><input type="checkbox" name="Nights" value="Yes" required> Available for Nights</label>
+<label><input type="checkbox" name="Weekends" value="Yes" required> Available for Weekends</label>
+
+<h4>Previous Experience</h4>
+<label for="previous-companies">List companies you've worked with as a driver:</label>
+<textarea id="previous-companies" name="Previous Companies" placeholder="Company names, locations..." rows="3" required></textarea>
+
+<label for="total-exp">Total Years of Experience:</label>
+<input type="number" id="total-exp" name="Total Years of Experience" placeholder="e.g., 3" min="0" required>
+
+      <h4>Medical Declaration</h4>
+<p>Do you have any medical conditions that may affect your ability to drive safely?</p>
+<label><input type="radio" name="Medical Condition" value="Yes" required> Yes</label>
+<label><input type="radio" name="Medical Condition" value="No" required> No</label>
+
+<textarea name="Medical Condition Details" placeholder="If yes, please provide details..." rows="3" optional></textarea>
+
+<h4>Declaration and Signature</h4>
+<p>
+I confirm that the information provided is true and complete. I consent to Logsupp Ltd verifying my driving licence and conducting background checks where required. I understand that providing false information may result in termination of employment or contract.
+</p>
+
+<label for="declaration-name">Full Name:</label>
+<input type="text" id="declaration-name" name="Declaration Name" placeholder="Full Name" required>
+
+<label for="declaration-date">Submit Date:</label>
+<input type="date" id="declaration-date" name="Declaration Date" required>
+
+<label><input type="checkbox" name="Signature Confirmed" required> I confirm this serves as my digital signature.</label>
+
+     <!-- Additional Comments / Notes -->
+<div class="form-group">
+  <label for="additional_notes"><b>Additional Comments / Notes</b></label>
+  <textarea 
+    id="additional_notes" 
+    name="additional_notes" 
+    placeholder="Write any additional information or notes here..." 
+    rows="4"
+    style="width: 100%; resize: vertical;"
+  ></textarea>
+</div>
+
+      <h4>Data Protection & Privacy Notice</h4>
+<p>
+Your personal data will be stored securely and processed in accordance with UK GDPR for recruitment and compliance purposes only.
+</p>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+
+</body>
+
+</html>
